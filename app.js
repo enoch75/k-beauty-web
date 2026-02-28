@@ -988,7 +988,7 @@ if (window.paypal) {
 
                 // 🚀 MAKE.COM WEBHOOK INTEGRATION
                 // Make.com 자동화 웹훅 연결
-                const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/h2behycd4w29db7duvui1tycfkit3pi2";
+                const MAKE_WEBHOOK_URL = "https://hook.eu1.make.com/gw9yqjd1c243zpkl82kwg7otja838lvt";
 
                 // 결제 성공 시 비동기로 Make.com에 고객 정보를 전송 (이메일 발송용)
                 fetch(MAKE_WEBHOOK_URL, {
