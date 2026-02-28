@@ -402,14 +402,14 @@
                 <!-- Email Input Form for Delivery -->
                 <div id="checkout-info-form"
                     style="max-width: 400px; margin: 0 auto 15px auto; text-align: left; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 8px; border: 1px solid #444;">
-                    <label for="buyer-email"
+                    <label for="buyer-email" data-i18n="email-label"
                         style="display: block; color: var(--accent); font-weight: bold; margin-bottom: 8px; font-size: 0.9rem;">
                         📧 시스템 발송용 이메일 주소 (필수)
                     </label>
                     <input type="email" id="buyer-email" required placeholder="example@email.com"
                         style="width: 100%; padding: 12px; border-radius: 6px; border: 1px solid #555; background: #fff; font-size: 1rem; color: #333; outline: none; box-sizing: border-box;"
                         oninput="validateEmailForPaypal()">
-                    <p style="margin: 8px 0 0 0; font-size: 0.75rem; color: #aaa;">
+                    <p data-i18n="email-desc" style="margin: 8px 0 0 0; font-size: 0.75rem; color: #aaa;">
                         결제 즉시 해당 이메일로 노션 접속 권한이 발송됩니다.
                     </p>
                 </div>
@@ -418,7 +418,7 @@
                 <!-- The PayPal button will be disabled/hidden until email is provided -->
                 <div id="paypal-button-wrapper"
                     style="max-width: 400px; margin: 0 auto; opacity: 0.4; pointer-events: none; transition: all 0.3s ease;">
-                    <div id="paypal-overlay-msg"
+                    <div id="paypal-overlay-msg" data-i18n="email-alert"
                         style="color: #ff6b6b; font-size: 0.85rem; margin-bottom: 10px; font-weight: bold;">
                         ⚠️ 이메일 주소를 먼저 입력해 주세요.
                     </div>
