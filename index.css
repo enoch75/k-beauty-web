@@ -1,0 +1,446 @@
+:root {
+    --bg-color: #0d1117;
+    --card-bg: #161b22;
+    --text-primary: #c9d1d9;
+    --text-secondary: #8b949e;
+    --accent: #238636;
+    --accent-light: #2ea043;
+    --border-color: #30363d;
+    --danger: #da3633;
+    --warning: #d29922;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 40px 0;
+    background: linear-gradient(180deg, rgba(35, 134, 54, 0.1) 0%, rgba(13, 17, 23, 0) 100%);
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--accent-light);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+.lang-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 8px;
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+select {
+    background: transparent;
+    color: var(--text-primary);
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-primary);
+    border-left: 4px solid var(--accent);
+    padding-left: 15px;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.input-field {
+    width: 100%;
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.input-field:focus {
+    border-color: var(--accent);
+    outline: none;
+}
+
+.result-box {
+    background: rgba(35, 134, 54, 0.05);
+    border: 1px dashed var(--accent);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.total-price {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--accent-light);
+    margin: 10px 0;
+}
+
+.notice {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 10px;
+}
+
+.premium-banner {
+    background: linear-gradient(90deg, #238636 0%, #2ea043 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.premium-banner h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.premium-banner p {
+    opacity: 0.9;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+    width: 100%;
+}
+
+.cta-button:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+.btn-premium {
+    background: white;
+    color: var(--accent);
+    border: none;
+    padding: 12px 25px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn-premium:hover {
+    transform: scale(1.05);
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+.badge-trust {
+    background: #1f6feb;
+}
+
+.badge-safety {
+    background: #238636;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    border-top: 1px solid var(--border-color);
+}
+
+#paypal-button-container {
+    margin-top: 20px;
+}
+
+/* Optgroup & Option Styling */
+optgroup {
+    background-color: var(--card-bg);
+    color: var(--accent);
+    font-weight: 700;
+    font-style: normal;
+}
+
+option {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+}
+
+/* Multi-language Font Support (Southeast Asia) */
+select:has(option[value="th"]:checked),
+select:has(option[value="vi"]:checked),
+[lang="th"],
+[lang="vi"] {
+    font-family: 'Inter', 'Noto Sans KR', sans-serif;
+    line-height: 1.6;
+}
+
+/* Administrative Guide Cards */
+.admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.admin-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 18px;
+    transition: all 0.3s;
+}
+
+.admin-card:hover {
+    border-color: var(--accent);
+    background: rgba(35, 134, 54, 0.05);
+    transform: translateY(-2px);
+}
+
+.admin-card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-card-desc {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+/* Safety FAQ Accordion */
+.faq-container {
+    margin-top: 20px;
+}
+
+details {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: border-color 0.3s, background 0.3s;
+}
+
+details:hover {
+    border-color: var(--accent);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+summary {
+    padding: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+summary::after {
+    content: '＋';
+    font-size: 1.2rem;
+    color: var(--accent);
+    transition: transform 0.3s;
+}
+
+details[open] summary {
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+details[open] summary::after {
+    content: '－';
+}
+
+details[open] {
+    border-color: var(--accent);
+    background: rgba(35, 134, 54, 0.03);
+}
+
+.faq-content {
+    padding: 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+/* Course Preview Styling */
+.course-card {
+    border-color: var(--accent);
+    background: linear-gradient(145deg, rgba(35, 134, 54, 0.05) 0%, rgba(13, 17, 23, 1) 100%);
+}
+
+.course-preview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.course-unit {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 15px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.course-unit:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--text-secondary);
+}
+
+.unit-title {
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.course-example {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ex-text {
+    font-size: 1.1rem;
+    color: #e6edf3;
+    font-weight: 800;
+}
+
+.ex-sub {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+
+    .calc-grid,
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Price Calculator Advice Boxes */
+.advice-box {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    text-align: left;
+    border-left: 4px solid transparent;
+}
+
+.advice-green {
+    background: rgba(35, 134, 54, 0.1);
+    border-left-color: var(--accent);
+    color: var(--accent-light);
+}
+
+.advice-yellow {
+    background: rgba(210, 153, 34, 0.1);
+    border-left-color: var(--warning);
+    color: var(--warning);
+}
+
+.advice-red {
+    background: rgba(218, 54, 51, 0.1);
+    border-left-color: var(--danger);
+    color: #ff6b6b;
+}
+
+#calc-cta-wrapper .cta-button {
+    background-color: var(--danger);
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+#calc-cta-wrapper .cta-button:hover {
+    transform: translateY(-2px);
+    background-color: #ff6b6b;
+}
