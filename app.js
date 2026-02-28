@@ -1037,7 +1037,7 @@ if (window.paypal) {
                 // The actual Notion public View-Only link provided by the user
                 const notionSystemLink = "https://modern-cosmos-91c.notion.site/The-K-Beauty-Black-Book-313d5bbcf6ab8012a5d4f510ebcac7b3";
 
-                linksContainer.innerHTML = createAccessBtn("K-Beauty 시스템 접속하기 (1년 무제한)", notionSystemLink);
+                linksContainer.innerHTML = createAccessBtn("K-Beauty 시스템 접속하기", notionSystemLink);
 
                 // Add a small backup copy-to-clipboard button
                 const copyBtnHtml = `
